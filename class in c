@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+
+class Car {
+  // Access specifier: members are accessible from outside the class
+public:
+  std::string brand;
+  std::string model;
+  int year;
+
+  // Member function (method) defined inside the class
+  void displayDetails() {
+    std::cout << "Brand: " << brand << ", Model: " << model
+              << ", Year: " << year << std::endl;
+  }
+};
+
+int main() {
+  // Create an object (instance) of the Car class
+  Car carObj1;
+
+  // Access attributes and set values using the dot operator (.)
+  carObj1.brand = "BMW";
+  carObj1.model = "X5";
+  carObj1.year = 1999;
+
+  // Call a member function
+  carObj1.displayDetails();
+
+  // Create another object from the same blueprint
+  Car carObj2;
+  carObj2.brand = "Ford";
+  carObj2.model = "Mustang";
+  carObj2.year = 1969;
+
+  carObj2.displayDetails();
+
+  return 0;
+}
